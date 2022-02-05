@@ -16,7 +16,6 @@ public class BrowserUtils {
 	Select letsSelect;
 	Actions act;
 	
-	
 	// this method returns true when given element is found
 	// returns false when given element is not found
 	public boolean isElementPresent(WebElement element) {
