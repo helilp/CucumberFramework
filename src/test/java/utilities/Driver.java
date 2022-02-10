@@ -46,6 +46,13 @@ public class Driver {
 				driver = new SafariDriver();
 				break;
 			case "chrome":
+				ChromeDriverManager.chromedriver().setup();
+				ChromeOptions opts = new ChromeOptions();
+				opts.addArguments("--disable-gpu");
+				opts.addArguments("--no-sandbox");
+				driver = new ChromeDriver(opts);
+				break;
+			case "chrome-headless":
 			default:
 				ChromeDriverManager.chromedriver().setup();
 				ChromeOptions opts = new ChromeOptions();
