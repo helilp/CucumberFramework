@@ -47,10 +47,10 @@ public class Driver {
 				break;
 			case "chrome":
 				ChromeDriverManager.chromedriver().setup();
-				ChromeOptions opts = new ChromeOptions();
-				opts.addArguments("--disable-gpu");
-				opts.addArguments("--no-sandbox");
-				driver = new ChromeDriver(opts);
+				ChromeOptions chromeoptions = new ChromeOptions();
+				chromeoptions.addArguments("--disable-gpu");
+				chromeoptions.addArguments("--no-sandbox");
+				driver = new ChromeDriver(chromeoptions);
 				break;
 			case "chrome-headless":
 			default:
