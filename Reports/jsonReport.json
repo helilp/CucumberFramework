@@ -3,11 +3,32 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-02-09T23:49:57.003Z",
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 296381000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am on the SauceDemo login page",
+            "match": {
+              "location": "step_definitions.SuaceDemoLoginSteps.i_am_on_the_sauce_demo_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-11T00:57:14.525Z",
         "before": [
           {
             "result": {
-              "duration": 3254184000,
+              "duration": 1108995000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +36,14 @@
             }
           }
         ],
-        "line": 5,
-        "name": "I should be able to select a date from date picker",
+        "line": 31,
+        "name": "User is not able to log in with invalid credentials",
         "description": "",
-        "id": "demo-qa-scenarios;i-should-be-able-to-select-a-date-from-date-picker",
+        "id": "sauce-demo-login;user-is-not-able-to-log-in-with-invalid-credentials;credentials;2",
         "after": [
           {
             "result": {
-              "duration": 410583000,
+              "duration": 85232000,
               "status": "passed"
             },
             "match": {
@@ -31,69 +52,331 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1665535000,
+              "duration": 143521000,
               "status": "passed"
             },
-            "line": 6,
-            "name": "I am on the date picker page \"https://demoqa.com/date-picker\"",
+            "line": 24,
+            "name": "I enter invalid username \"standard_user\" password \"secret_invalid\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"https://demoqa.com/date-picker\"",
-                  "offset": 29
-                }
-              ],
-              "location": "step_definitions.DemoQADatePickerSteps.i_am_on_the_date_picker_page(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1433990000,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "I enter \"09/24/2027\" to date picker",
-            "match": {
-              "arguments": [
+                  "val": "\"standard_user\"",
+                  "offset": 25
+                },
                 {
-                  "val": "\"09/24/2027\"",
-                  "offset": 8
+                  "val": "\"secret_invalid\"",
+                  "offset": 50
                 }
               ],
-              "location": "step_definitions.DemoQADatePickerSteps.i_enter_to_date_picker(java.lang.String)"
+              "location": "step_definitions.SuaceDemoLoginSteps.i_enter_invalid_username_password(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 10341000,
+              "duration": 42681000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "Date entered should be selected",
+            "line": 25,
+            "name": "I click on the login button",
             "match": {
-              "location": "step_definitions.DemoQADatePickerSteps.date_entered_should_be_selected()"
+              "location": "step_definitions.SuaceDemoLoginSteps.i_click_on_the_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10045857000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I should not be logged in",
+            "match": {
+              "location": "step_definitions.SuaceDemoLoginSteps.i_should_not_be_logged_in()"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17209000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "Error message should display \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Epic sadface: Username and password do not match any user in this service\"",
+                  "offset": 29
+                }
+              ],
+              "location": "step_definitions.SuaceDemoLoginSteps.error_message_should_display(java.lang.String)"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@DemoQADatePicker"
+            "name": "@SauceInvalidTests"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 191956000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am on the SauceDemo login page",
+            "match": {
+              "location": "step_definitions.SuaceDemoLoginSteps.i_am_on_the_sauce_demo_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-11T00:57:26.322Z",
+        "before": [
+          {
+            "result": {
+              "duration": 674418000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hook.setup()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "User is not able to log in with invalid credentials",
+        "description": "",
+        "id": "sauce-demo-login;user-is-not-able-to-log-in-with-invalid-credentials;credentials;3",
+        "after": [
+          {
+            "result": {
+              "duration": 79388000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hook.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 120699000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I enter invalid username \"standard\" password \"standard\u003d\u003d\u003d\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"standard\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"standard\u003d\u003d\u003d\"",
+                  "offset": 45
+                }
+              ],
+              "location": "step_definitions.SuaceDemoLoginSteps.i_enter_invalid_username_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 55222000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I click on the login button",
+            "match": {
+              "location": "step_definitions.SuaceDemoLoginSteps.i_click_on_the_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10041857000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I should not be logged in",
+            "match": {
+              "location": "step_definitions.SuaceDemoLoginSteps.i_should_not_be_logged_in()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15879000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "Error message should display \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Epic sadface: Username and password do not match any user in this service\"",
+                  "offset": 29
+                }
+              ],
+              "location": "step_definitions.SuaceDemoLoginSteps.error_message_should_display(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SauceInvalidTests"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 265606000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am on the SauceDemo login page",
+            "match": {
+              "location": "step_definitions.SuaceDemoLoginSteps.i_am_on_the_sauce_demo_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-11T00:57:37.549Z",
+        "before": [
+          {
+            "result": {
+              "duration": 660162000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hook.setup()"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "User is not able to log in with invalid credentials",
+        "description": "",
+        "id": "sauce-demo-login;user-is-not-able-to-log-in-with-invalid-credentials;credentials;4",
+        "after": [
+          {
+            "result": {
+              "duration": 79565000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hook.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 120213000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I enter invalid username \"standard123\" password \"standard652\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"standard123\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"standard652\"",
+                  "offset": 48
+                }
+              ],
+              "location": "step_definitions.SuaceDemoLoginSteps.i_enter_invalid_username_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 42358000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I click on the login button",
+            "match": {
+              "location": "step_definitions.SuaceDemoLoginSteps.i_click_on_the_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10063597000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I should not be logged in",
+            "match": {
+              "location": "step_definitions.SuaceDemoLoginSteps.i_should_not_be_logged_in()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 16740000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "Error message should display \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Epic sadface: Username and password do not match any user in this service\"",
+                  "offset": 29
+                }
+              ],
+              "location": "step_definitions.SuaceDemoLoginSteps.error_message_should_display(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SauceInvalidTests"
           }
         ]
       }
     ],
-    "name": "Demo QA Scenarios",
-    "description": "         I want to practice different scenarios on Demo QA",
-    "id": "demo-qa-scenarios",
+    "name": "Sauce Demo Login",
+    "description": "         This feature focues on positive and nagetive \n         log in tests",
+    "id": "sauce-demo-login",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/DemoQADatePicker.feature",
+    "uri": "file:src/test/resources/features/SauceDemoLogin.feature",
     "tags": []
   }
 ]
