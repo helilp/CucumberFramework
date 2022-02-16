@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-02-05T20:51:15.652Z",
+        "start_timestamp": "2022-02-16T03:02:56.256Z",
         "before": [
           {
             "result": {
-              "duration": 1097966000,
+              "duration": 981007000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 5,
-        "name": "I should be able to select a date from date picker",
+        "line": 49,
+        "name": "As a user, I am able to insert a trade to Database",
         "description": "",
-        "id": "demo-qa-scenarios;i-should-be-able-to-select-a-date-from-date-picker",
+        "id": "as-a-user--i-am-able-to-perform-trade-app-functions;as-a-user--i-am-able-to-insert-a-trade-to-database",
         "after": [
           {
             "result": {
-              "duration": 80717000,
+              "duration": 72902000,
               "status": "passed"
             },
             "match": {
@@ -35,65 +35,144 @@
         "steps": [
           {
             "result": {
-              "duration": 1396888000,
+              "duration": 535963000,
               "status": "passed"
             },
-            "line": 6,
-            "name": "I am on the date picker page \"https://demoqa.com/date-picker\"",
+            "line": 50,
+            "name": "I executed Insert query with the following data to Database",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"https://demoqa.com/date-picker\"",
-                  "offset": 29
-                }
-              ],
-              "location": "step_definitions.DemoQADatePickerSteps.i_am_on_the_date_picker_page(java.lang.String)"
+              "location": "step_definitions.TradeAppTrades.i_executed_insert_query_with_the_following_data_to_database(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "\u0027890\u0027",
+                  "\u00271\u0027",
+                  "\u00270\u0027",
+                  "\u0027HOOD\u0027",
+                  "\u00272021-10-10\u0027",
+                  "\u002750.0\u0027",
+                  "\u00272022-02-11\u0027",
+                  "\u002733.0\u0027",
+                  "\u00270\u0027"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 216385000,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "I am on the Trade App log in page",
+            "match": {
+              "location": "step_definitions.TradeAppTrades.i_am_on_the_trade_app_log_in_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 856026000,
+              "duration": 108532000,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I enter \"09/24/2027\" to date picker",
+            "line": 53,
+            "name": "I enter username \"helil\" password \"SuperHelil123!\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"09/24/2027\"",
-                  "offset": 8
+                  "val": "\"helil\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"SuperHelil123!\"",
+                  "offset": 34
                 }
               ],
-              "location": "step_definitions.DemoQADatePickerSteps.i_enter_to_date_picker(java.lang.String)"
+              "location": "step_definitions.TradeAppTrades.i_enter_username_password(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 10358000,
+              "duration": 565499000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "Date entered should be selected",
+            "line": 54,
+            "name": "I click on Trade login button",
             "match": {
-              "location": "step_definitions.DemoQADatePickerSteps.date_entered_should_be_selected()"
+              "location": "step_definitions.TradeAppTrades.i_click_on_trade_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 41908000,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "I should be on Trade homepage",
+            "match": {
+              "location": "step_definitions.TradeAppTrades.i_should_be_on_trade_homepage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 39118000,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "I search the \"HOOD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"HOOD\"",
+                  "offset": 13
+                }
+              ],
+              "location": "step_definitions.TradeAppTrades.i_search_the(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 94655000,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "I click the Search button",
+            "match": {
+              "location": "step_definitions.TradeAppTrades.i_click_the_search_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 34567000,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "The trade input displayed on the trade table",
+            "match": {
+              "location": "step_definitions.TradeAppTrades.the_trade_input_displayed_on_the_trade_table()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@DemoQADatePicker"
+            "name": "@InsertDB"
           }
         ]
       }
     ],
-    "name": "Demo QA Scenarios",
-    "description": "         I want to practice different scenarios on Demo QA",
-    "id": "demo-qa-scenarios",
+    "name": "As a user, I am able to perform Trade app functions",
+    "description": "  I want to add, delete and update trades",
+    "id": "as-a-user--i-am-able-to-perform-trade-app-functions",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/DemoQADatePicker.feature",
+    "uri": "file:src/test/resources/features/TradeAppTrades.feature",
     "tags": []
   }
 ]

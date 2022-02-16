@@ -22,5 +22,6 @@ public class AmazonLoginPage {
 	
 	@FindBy (css = ".a-list-item")
 	public WebElement errorMessage;
+	
 
 }

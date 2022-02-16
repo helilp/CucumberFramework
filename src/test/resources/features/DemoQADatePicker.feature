@@ -6,3 +6,5 @@ Feature: Demo QA Scenarios
     Given I am on the date picker page "https://demoqa.com/date-picker"
     When I enter "09/24/2027" to date picker
     Then Date entered should be selected
+
+    
