@@ -9,6 +9,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Assert;
+
 public class DButils {
 	
 	// in order to work with JDBC and connect to a Database, we need to follow certain steps:
@@ -61,6 +63,7 @@ public class DButils {
 		} catch (SQLException e) {
 			System.out.println("DB connection Not established.");
 			e.printStackTrace();
+			Assert.fail();
 		}
 	}
 	

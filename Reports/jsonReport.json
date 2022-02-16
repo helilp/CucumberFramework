@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-02-12T21:00:57.261Z",
+        "start_timestamp": "2022-02-16T03:02:56.256Z",
         "before": [
           {
             "result": {
-              "duration": 1440443000,
+              "duration": 981007000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 5,
-        "name": "As a user, I want to add a trade",
+        "line": 49,
+        "name": "As a user, I am able to insert a trade to Database",
         "description": "",
-        "id": "as-a-user--i-am-able-to-perform-trade-app-functions;as-a-user--i-want-to-add-a-trade",
+        "id": "as-a-user--i-am-able-to-perform-trade-app-functions;as-a-user--i-am-able-to-insert-a-trade-to-database",
         "after": [
           {
             "result": {
-              "duration": 73842000,
+              "duration": 72902000,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,37 @@
         "steps": [
           {
             "result": {
-              "duration": 270771000,
+              "duration": 535963000,
               "status": "passed"
             },
-            "line": 6,
+            "line": 50,
+            "name": "I executed Insert query with the following data to Database",
+            "match": {
+              "location": "step_definitions.TradeAppTrades.i_executed_insert_query_with_the_following_data_to_database(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "\u0027890\u0027",
+                  "\u00271\u0027",
+                  "\u00270\u0027",
+                  "\u0027HOOD\u0027",
+                  "\u00272021-10-10\u0027",
+                  "\u002750.0\u0027",
+                  "\u00272022-02-11\u0027",
+                  "\u002733.0\u0027",
+                  "\u00270\u0027"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 216385000,
+              "status": "passed"
+            },
+            "line": 52,
             "name": "I am on the Trade App log in page",
             "match": {
               "location": "step_definitions.TradeAppTrades.i_am_on_the_trade_app_log_in_page()"
@@ -47,10 +74,10 @@
           },
           {
             "result": {
-              "duration": 105343000,
+              "duration": 108532000,
               "status": "passed"
             },
-            "line": 7,
+            "line": 53,
             "name": "I enter username \"helil\" password \"SuperHelil123!\"",
             "match": {
               "arguments": [
@@ -69,10 +96,10 @@
           },
           {
             "result": {
-              "duration": 565762000,
+              "duration": 565499000,
               "status": "passed"
             },
-            "line": 8,
+            "line": 54,
             "name": "I click on Trade login button",
             "match": {
               "location": "step_definitions.TradeAppTrades.i_click_on_trade_login_button()"
@@ -81,10 +108,10 @@
           },
           {
             "result": {
-              "duration": 41849000,
+              "duration": 41908000,
               "status": "passed"
             },
-            "line": 9,
+            "line": 55,
             "name": "I should be on Trade homepage",
             "match": {
               "location": "step_definitions.TradeAppTrades.i_should_be_on_trade_homepage()"
@@ -93,94 +120,50 @@
           },
           {
             "result": {
-              "duration": 103171000,
+              "duration": 39118000,
               "status": "passed"
             },
-            "line": 10,
-            "name": "I click on Add Trade button",
-            "match": {
-              "location": "step_definitions.TradeAppTrades.i_click_on_add_trade_button()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 19094000,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I should be on Save Trade page",
-            "match": {
-              "location": "step_definitions.TradeAppTrades.i_should_be_on_save_trade_page()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 233010000,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "I select \"Buy to Open\" and I enter symbol \"Flower\" entryDate \"04/04/2021\" entryPrice \"10.0\" exitDate \"01/11/2022\" exitPrice \"18\"",
+            "line": 56,
+            "name": "I search the \"HOOD\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Buy to Open\"",
-                  "offset": 9
-                },
-                {
-                  "val": "\"Flower\"",
-                  "offset": 42
-                },
-                {
-                  "val": "\"04/04/2021\"",
-                  "offset": 61
-                },
-                {
-                  "val": "\"10.0\"",
-                  "offset": 85
-                },
-                {
-                  "val": "\"01/11/2022\"",
-                  "offset": 101
-                },
-                {
-                  "val": "\"18\"",
-                  "offset": 124
+                  "val": "\"HOOD\"",
+                  "offset": 13
                 }
               ],
-              "location": "step_definitions.TradeAppTrades.i_select_and_i_enter_symbol_entry_date_entry_price_exit_date_exit_price(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+              "location": "step_definitions.TradeAppTrades.i_search_the(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 770839000,
+              "duration": 94655000,
               "status": "passed"
             },
-            "line": 13,
-            "name": "I click Save button",
+            "line": 57,
+            "name": "I click the Search button",
             "match": {
-              "location": "step_definitions.TradeAppTrades.i_click_save_button()"
+              "location": "step_definitions.TradeAppTrades.i_click_the_search_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 534838000,
+              "duration": 34567000,
               "status": "passed"
             },
-            "line": 14,
-            "name": "The trade is displayed on the trade table",
+            "line": 58,
+            "name": "The trade input displayed on the trade table",
             "match": {
-              "location": "step_definitions.TradeAppTrades.the_trade_is_displayed_on_the_trade_table()"
+              "location": "step_definitions.TradeAppTrades.the_trade_input_displayed_on_the_trade_table()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@AddTrade"
+            "name": "@InsertDB"
           }
         ]
       }
