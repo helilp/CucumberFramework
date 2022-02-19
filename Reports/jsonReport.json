@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-02-18T02:57:15.859Z",
+        "start_timestamp": "2022-02-19T20:33:35.450Z",
         "before": [
           {
             "result": {
-              "duration": 774886000,
+              "duration": 809217000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 6,
-        "name": "I am able to create a Pet using Post request",
+        "line": 72,
+        "name": "As a user, I am able to update a pet",
         "description": "",
-        "id": "as-a-user-i-am-able-to-perform-http-request;i-am-able-to-create-a-pet-using-post-request",
+        "id": "as-a-user-i-am-able-to-perform-http-request;as-a-user--i-am-able-to-update-a-pet",
         "after": [
           {
             "result": {
-              "duration": 68560000,
+              "duration": 67056000,
               "status": "passed"
             },
             "match": {
@@ -35,20 +35,90 @@
         "steps": [
           {
             "result": {
-              "duration": 1314738000,
+              "duration": 312000,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I am able to perform Post request to create a pet with valid request body",
+            "line": 73,
+            "name": "I have the Update request URL",
             "match": {
-              "location": "step_definitions.PetStoreSteps.i_am_able_to_perform_post_request_to_create_a_pet_with_valid_request_body()"
+              "location": "step_definitions.PetStoreSteps.i_have_the_update_request_url()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 965270000,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "I perform UPDATE request to update Name to existing Pet",
+            "match": {
+              "location": "step_definitions.PetStoreSteps.i_perform_update_request_to_update_name_with_valid()"
             },
             "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 29041000,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "Response status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 31
+                }
+              ],
+              "location": "step_definitions.PetStoreSteps.response_status_code_should_be(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3031000,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "Content type should be \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 23
+                }
+              ],
+              "location": "step_definitions.PetStoreSteps.content_type_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 304609000,
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "Id is 667788 and is \"Meow\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "667788",
+                  "offset": 6
+                },
+                {
+                  "val": "\"Meow\"",
+                  "offset": 20
+                }
+              ],
+              "location": "step_definitions.PetStoreSteps.id_is_and_is(java.lang.Integer,java.lang.String)"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@CreateAPet"
+            "name": "@updateAPet"
           }
         ]
       }
