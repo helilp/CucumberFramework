@@ -77,7 +77,14 @@ public class PetStoreAPI_Tests {
   
   @Test()
   public void justPrintingSomehing() {
-	  System.out.println("This is actually from TestNG class API Test Suite.");
+	  
+	  requestURL = "https://petstore.swagger.io/v2/pet/";
+	  
+	  response = given().accept(ContentType.JSON).auth().oauth2("helil-prime")
+	  .when().get(requestURL + petID);
+	  
+	  response.prettyPrint();
+	  
   }
   
   

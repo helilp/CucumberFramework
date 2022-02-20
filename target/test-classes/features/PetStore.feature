@@ -6,7 +6,7 @@ Feature: As a user I am able to perform HTTP request
   Scenario: I am able to create a Pet using Post request
     When I am able to perform Post request to create a pet with valid request body
 
-  @PostToAddPet
+  @PostToAddPet @SmokeTests
   Scenario: As a user, I should be able to perform POST request to add new pet to store
     Given I have the POST request URL and valid request body
     When I perform POST request to URL with request body
@@ -14,7 +14,7 @@ Feature: As a user I am able to perform HTTP request
     And Content type is "application/json"
     And Response body match the request body
 
-  @invalidPostRequest
+  @invalidPostRequest @SmokeTests
   Scenario: As a user, I should not be able to perform POST request to invalid data structure
     Given I have the POST request URL and invalid request body
     When I perform POST request to URL with request body
@@ -22,7 +22,7 @@ Feature: As a user I am able to perform HTTP request
     And Content type is "application/json"
     And message should be "something bad happened"
 
-  @getRequestByStatus
+  @getRequestByStatus @SmokeTests
   Scenario Outline: Find a pet by status
     Given valid endpoint exist
     When I send a GET request by status "<status>" to valid endpoint
@@ -35,7 +35,7 @@ Feature: As a user I am able to perform HTTP request
       | pending   |
       | sold      |
 
-  @invalid_URL_Get
+  @invalid_URL_Get @SmokeTests
   Scenario: Find a pet by invalid url using status available
     Given Invalid endpoint exist
     When I send a GET request by status "available" to invalid endpoint
